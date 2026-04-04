@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MusicNFT | Upload tracks, mint editions, and sell them on-chain</title>
+    <meta
+      name="description"
+      content="MusicNFT is a full-stack music app and NFT marketplace prototype with track uploads, royalties, wallet connection, and Sepolia-based minting."
+    />
+    <meta
+      property="og:title"
+      content="MusicNFT | Upload tracks, mint editions, and sell them on-chain"
+    />
+    <meta
+      property="og:description"
+      content="A music-first NFT product concept with artist pages, playlists, IPFS uploads, royalty-aware minting, wallet connection, and marketplace listings."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://merup.me/musicnft/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="brand" href="https://github.com/Meru143/musicnft">MusicNFT</a>
+        <nav>
+          <a href="#flow">Flow</a>
+          <a href="#features">Features</a>
+          <a href="#stack">Stack</a>
+          <a href="https://github.com/Meru143/musicnft">GitHub</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Music catalog + wallet + NFT storefront</p>
+            <h1>Turn a track into a collectible edition without leaving the product.</h1>
+            <p class="lede">
+              MusicNFT is a product prototype that combines music discovery, artist pages,
+              playlists, IPFS-backed uploads, Sepolia minting, royalty-aware editions, and
+              marketplace listings inside one full-stack app.
+            </p>
+            <div class="actions">
+              <a class="button primary" href="https://github.com/Meru143/musicnft">View repository</a>
+              <a class="button secondary" href="#stack">See the stack</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="cover panel">
+              <img src="./assets/musicnft-icon.png" alt="MusicNFT cover art" />
+            </div>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <span>Upload</span>
+                <p>Track + cover art pushed to IPFS through Pinata.</p>
+              </div>
+              <div class="mini-card">
+                <span>Mint</span>
+                <p>Set quantity, starting price, and royalty percentage.</p>
+              </div>
+              <div class="mini-card">
+                <span>Collect</span>
+                <p>List editions, connect MetaMask, buy from the marketplace.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="flow" class="section split">
+          <div class="section-head">
+            <p class="eyebrow">Flow</p>
+            <h2>A music-first NFT flow instead of a generic token dashboard.</h2>
+            <p>
+              The app begins as a listener product with tracks, artists, playlists, and a player.
+              NFT minting sits on top of that experience, which makes the collectible feel tied to
+              an actual piece of media instead of an isolated contract interaction.
+            </p>
+          </div>
+
+          <div class="flow">
+            <div class="step">
+              <span>01</span>
+              <p>Upload a track and cover art, then pin the assets to IPFS.</p>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <p>Connect MetaMask and switch the wallet to Sepolia.</p>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <p>Mint one or more editions with a starting price and royalty percentage.</p>
+            </div>
+            <div class="step">
+              <span>04</span>
+              <p>Show owned NFTs, list them in the marketplace, and let collectors purchase them.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="section">
+          <div class="section-head">
+            <p class="eyebrow">Features</p>
+            <h2>The interesting part is the combination, not any one isolated screen.</h2>
+            <p>
+              MusicNFT pulls together several product surfaces that usually live in separate demos:
+              listening UI, uploads, wallet connection, minting, royalties, and secondary listings.
+            </p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Artist and track browsing</h3>
+              <p>Start from a music app shell with artists, tracks, playlists, and an audio player.</p>
+            </article>
+            <article class="card">
+              <h3>Wallet-aware minting</h3>
+              <p>Mint editions from the track UI and guard the flow with MetaMask and Sepolia checks.</p>
+            </article>
+            <article class="card">
+              <h3>Royalty-aware editions</h3>
+              <p>Set price, quantity, and royalty percentage at mint time instead of treating metadata as an afterthought.</p>
+            </article>
+            <article class="card">
+              <h3>Marketplace loop</h3>
+              <p>Owned NFTs can be listed and purchased through the same app surface.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="stack" class="section stack">
+          <div class="section-head">
+            <p class="eyebrow">Stack</p>
+            <h2>React, Express, Drizzle, ethers, IPFS, and a Solidity contract scaffold.</h2>
+            <p>
+              The repo is organized as a single product workspace: client, server, shared schema,
+              and contract source. That makes it useful as a reference for stitching a music UI to
+              an NFT minting path without splitting the concept across multiple repositories.
+            </p>
+          </div>
+
+          <div class="install-grid">
+            <pre><code>npm install
+npm run dev</code></pre>
+            <pre><code>Needs:
+
+- MetaMask
+- Sepolia
+- Pinata credentials
+- VITE_NFT_CONTRACT_ADDRESS</code></pre>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
