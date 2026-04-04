@@ -18,7 +18,7 @@ body {
   color: var(--ink);
   background:
     radial-gradient(circle at top left, rgba(50, 224, 196, 0.14), transparent 22%),
-    radial-gradient(circle at top right, rgba(132, 94, 255, 0.18), transparent 22%),
+    radial-gradient(circle at top right, rgba(101, 88, 214, 0.1), transparent 20%),
     radial-gradient(circle at bottom right, rgba(255, 216, 97, 0.12), transparent 20%),
     linear-gradient(180deg, #0c0a12 0%, #15101f 100%);
   font-family: "Unbounded", system-ui, sans-serif;
@@ -74,7 +74,11 @@ pre, code { font-family: "IBM Plex Mono", ui-monospace, monospace; }
   backdrop-filter: blur(16px);
 }
 
-.hero-copy { padding: 36px; }
+.hero-copy {
+  display: grid;
+  align-content: start;
+  padding: 36px;
+}
 
 .eyebrow {
   margin: 0 0 14px;
@@ -115,6 +119,25 @@ h2 {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-pills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .button {
@@ -175,7 +198,7 @@ h2 {
 .hero-loop {
   padding: 28px;
   background:
-    linear-gradient(135deg, rgba(50, 224, 196, 0.12), rgba(132, 94, 255, 0.16)),
+    linear-gradient(135deg, rgba(50, 224, 196, 0.08), rgba(101, 88, 214, 0.12)),
     var(--panel-strong);
 }
 
@@ -190,7 +213,7 @@ h2 {
 
 .hero-loop h2 {
   margin-bottom: 16px;
-  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-size: clamp(1.55rem, 3.2vw, 2.35rem);
 }
 
 .section { padding: 30px 0; }
