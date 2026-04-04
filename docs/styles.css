@@ -162,8 +162,11 @@ h2 {
 
 .hero-flow {
   display: grid;
+  align-content: start;
+  align-self: start;
+  height: fit-content;
   align-items: start;
-  gap: 18px;
+  gap: 10px;
 }
 
 .mini-grid,
